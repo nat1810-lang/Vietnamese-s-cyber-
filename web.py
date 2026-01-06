@@ -58,4 +58,4 @@ def check():
     return render_template("index.html", message=message)
 
 if __name__ == "__main__":
-    web.run(debug=True)
+    web.run(host="0.0.0.0", port=10000)
