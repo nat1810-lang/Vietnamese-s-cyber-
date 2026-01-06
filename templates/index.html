@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Security website"/>
+    <title>Security for people</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<hr>
+    <h1><strong>Chào mừng đến với thế giới an toàn trên không gian mạng!</strong></h1>
+       <img src="{{ url_for('static', filename='images/hero-image-4-1.jpg') }}">
+    <p><em>Tại đây, chúng tôi sẽ giúp bạn kiểm tra xem những thứ mà bạn đang nghi ngờ có thật sự là mối nguy hiểm hay không</em></p>
+    <p><strong>HÃY NHẬP SĐT, ĐƯỜNG LINK, EMAIL RÁC VÀO CÁC Ô DƯỚI ĐÂY (tùy vào nhu cầu cần kiểm tra)</strong></p>
+    <hr>
+  <div class="data">
+  <form method="POST" action="/check">
+    <input type="text" name="phone" placeholder="VD:0912xxxxxx">
+    <input type="text" name="email" placeholder="VD:xxxx@gmail.com">
+    <input type="text" name="url" placeholder="VD:https://xxxxx">
+    <button type="submit">Kiểm tra</button>
+  </form>
+
+  {% if message %}
+  <p>{{ message }}</p>
+  {% endif %}
+  
+  
+  </div>
+  <div class="form-data">
+    <input type="submit" value=" Kiểm tra nhanh" />
+  </div>
+  <div class="result-container">
+    <div class="title">
+        <span class="line"></span>
+        <h2>KẾT LUẬN: </h2>
+        <span class="line"></span>
+    </div>
+</body>
+</html>

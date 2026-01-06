@@ -1,0 +1,23 @@
+body {
+  background-color: rgb(232, 239, 242);
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+div {
+  text-align: center;
+}
+details {
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+.data {
+  text-align: center; /* căn chữ + input */
+}
+
+.form-table {
+  margin: 0 auto; /* căn giữa table */
+}
